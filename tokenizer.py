@@ -9,15 +9,3 @@ example_sent="The structures of mistletoe lectin I (ML-I) from Viscum album comp
 word_tokens = word_tokenize(example_sent)
 
 filtered_sentence = [w for w in word_tokens if not w in stop_words]
-
-filtered_sentence = []
-
-for w in word_tokens:
-    if w not in stop_words:
-        filtered_sentence.append(w)
-
-print "Original token :",word_tokens
-
-print "After removing stopwords",filtered_sentence
-
-print "Stopped words ",list(set(word_tokens) - set(filtered_sentence))
